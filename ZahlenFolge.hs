@@ -1,2 +1,4 @@
 module ZahlenFolge where
-zahlenFolge d = [x|x <- [1..], mod x d == 0]
+zahlenFolge :: [Int] -> [Int]
+zahlenFolge [] = []
+zahlenFolge (d:ds) = [x|x <- [1..], (length [y|y <- (d:ds), mod x y == 0]) > 0]
