@@ -1,2 +1,4 @@
 perm :: [Int] -> [[Int]]
-perm (x:xs) = [[]]
+perm [] = [[]]
+perm (x:[]) = [[x]]
+perm (x:xs) = []
