@@ -1,3 +1,3 @@
 module Data where
 
-type Lager = [(Int, String, Int)]
+type Lager = Int -> (String, Int)
