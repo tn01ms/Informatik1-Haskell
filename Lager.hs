@@ -2,7 +2,14 @@ module Lager where
 
 import Data
 
--- TODO
+getID :: Lager -> Int
+getID (id,_,_) = id
 
--- zum ausprobieren...
--- suche 3 (einlagern 1 "A" 5 (einlagern 2 "B" 12 (einlagern 3 "C" 10 leeresLager)))
+leeresLager :: Lager
+leeresLager = []
+
+einlagern :: Int -> String -> Int -> Lager -> Lager
+einlagern id bez gew lag = [(id, bez, lag)] ++ lag
+
+suche :: Int -> Lager -> (String, Int)
+suche id lag = [elem|elem <- lag, (getID (head elem)) == id]
