@@ -3,9 +3,12 @@ import Punkt
 
 type Streckenzug = [Punkt]
 
-class Eq Double where
-   (==) :: Double -> Double -> Bool
-   (==) a b = if (fst a) == (fst b) then true else false
+instance Eq Punkt where
+     (a,b) == (c,d) = true
+
+
+--   (==) :: Double -> Double -> Bool
+--   (==) a b = if (fst a) == (fst b) then true else false
    
 vergleiche :: a -> a -> Bool
 vergleiche a b = a == b
