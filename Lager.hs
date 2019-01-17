@@ -1,8 +1,11 @@
 module Lager where
-
 import Data
 
--- TODO
+--type Lager = Int -> (String, Int)
 
--- zum ausprobieren...
--- suche 3 (einlagern 1 "A" 5 (einlagern 2 "B" 12 (einlagern 3 "C" 10 leeresLager)))
+
+--einlagern :: Int -> String -> Int -> Lager -> Lager
+--einlagern id bez gew lag = lag + (Lager id -> (bez, gew))
+
+test :: Lager -> Lager
+test l = l
